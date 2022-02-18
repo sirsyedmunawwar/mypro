@@ -1,0 +1,265 @@
+.storetag {
+  font: normal normal 600 16px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #33a0ff;
+  height: 5vh;
+  background: #f6f7f8 0% 0% no-repeat padding-box;
+  text-align: center;
+  margin-bottom: 10vh;
+  padding-top: 2vh;
+  margin-top: 2vh;
+}
+.store {
+  width: 80%;
+  height: 270vh;
+  margin: 0 auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  height: 200vh;
+  width: 26%;
+  margin-left: 5%;
+}
+
+.top1 {
+  width: 80.5%;
+  height: 60vh;
+  background: #f6f7f8;
+  border-radius: 4px;
+  padding: 2vh 2vw 0 2vw;
+  font: normal normal 600 14px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+}
+.AccTag {
+  font: normal normal 600 18px/28px Proxima Nova;
+  letter-spacing: 0px;
+  color: #22262a;
+  margin-bottom: 2vh;
+}
+.listQty {
+  display: flex;
+  justify-content: space-between;
+}
+.top2 {
+  width: 80.5%;
+  height: 25vh;
+  background: #f6f7f8;
+  border-radius: 4px;
+  padding: 2vh 2vw 0 2vw;
+  font: normal normal 600 14px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+  margin: 4vh 0;
+}
+.top3 {
+  width: 80.5%;
+  height: 18vh;
+  background: #f6f7f8;
+  border-radius: 4px;
+  padding: 2vh 2vw 0 2vw;
+  font: normal normal 600 14px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+  margin: 4vh 0;
+}
+.coloricon1,
+.coloricon2,
+.coloricon3,
+.coloricon4,
+.coloricon5,
+.coloricon6 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 8px;
+  border: none;
+}
+.coloricon1 {
+  background-color: #006cff;
+}
+.coloricon2 {
+  background-color: #fc3e39;
+}
+.coloricon3 {
+  background-color: #171717;
+}
+.coloricon4 {
+  background-color: #fff600;
+}
+.coloricon5 {
+  background-color: #ff00b4;
+}
+.coloricon6 {
+  background-color: #efdfdf;
+}
+.coloricon:hover {
+  text-decoration: double;
+}
+.coloricon1:active,
+.coloricon2:active,
+.coloricon3:active,
+.coloricon4:active,
+.coloricon5:active,
+.coloricon6:active {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 8px;
+  border: 2px double black;
+}
+.main {
+  width: 66%;
+  height: 300vh;
+}
+.storebanner {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  background: #2e90e5 0% 0% no-repeat padding-box;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.storetext {
+  font: normal normal normal 16px/35px Poppins;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  width: 38%;
+  padding-left: 6%;
+}
+.storetexti8 {
+  font: normal normal 300 36px/50px Proxima Nova;
+  letter-spacing: 0px;
+}
+.storeimage {
+  height: 100%;
+  position: relative;
+  width: 40%;
+}
+.bestseller {
+  width: 100vw;
+  height: 135vh;
+  margin-top: 12vh;
+}
+.besttitle {
+  width: 100vw;
+  height: 34px;
+  text-align: center;
+  font: normal normal 600 26px/36px Proxima Nova;
+  letter-spacing: 0.75px;
+  color: #22262a;
+}
+.bestsellernavbar {
+  display: flex;
+  margin: 5vh auto 5vh;
+  justify-content: space-between;
+  width: 30vw;
+  text-align: center;
+  font: normal normal 600 12px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+}
+.Scardcontainer {
+  display: flex;
+  width: 100%;
+  margin: 0 auto 10vh;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 200vh;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.Scarditems {
+  width: 16vw;
+  height: 44vh;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat;
+  box-sizing: border-box;
+  border: 3px solid #f6f7f8;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.Scarditems:hover {
+  box-shadow: -4px 18px 30px #0000001a;
+  border: 3px solid #f6f7f8;
+  border-radius: 4px;
+}
+.Scardimage {
+  margin-top: 2vh;
+  width: 14vw;
+  height: 22vh;
+  border: 2px solid #f6f7f8;
+  border-radius: 4px;
+  opacity: 1;
+  box-sizing: border-box;
+}
+.Scarddetails {
+  padding-top: 2vh;
+  width: 14vw;
+  height: 15vh;
+  font: normal normal 600 16px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+  margin: auto;
+}
+.Scardrating {
+  display: block;
+  margin: 1vh 2vw;
+  text-align: center;
+}
+.Scardprice {
+  text-align: center;
+  font: normal normal normal 15px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #ff4858;
+  opacity: 1;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+.Scardactualprice {
+  text-align: center;
+  font: normal normal normal 16px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #c1c8ce;
+  opacity: 1;
+  text-decoration-line: line-through;
+  display: inline-block;
+}
+.pagenos {
+  background: #fafafb 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+.pagebutton {
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  padding-top: 3px;
+  text-align: center;
+  font: normal normal 600 18px/28px Proxima Nova;
+  letter-spacing: 0px;
+  color: #22262a;
+  opacity: 1;
+
+  margin: 0 5px;
+}
+.activepage {
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  padding-top: 3px;
+  text-align: center;
+  font: normal normal 600 18px/28px Proxima Nova;
+  letter-spacing: 0px;
+  color: #ffffff;
+  background: #22262a 0% 0% no-repeat padding-box;
+  margin: 0 5px;
+}

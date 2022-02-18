@@ -1,0 +1,66 @@
+.FP {
+  text-align: center;
+  font: normal normal 600 30px/36px Proxima Nova;
+  letter-spacing: 0.75px;
+  color: #22262a;
+  width: 80%;
+  margin: 0 auto 0;
+  padding: 18vh 0px 2vh;
+}
+.cardcontainer {
+  display: flex;
+  width: 85%;
+  margin: 0 auto 0;
+  align-items: center;
+}
+.carditems {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto 0;
+  width: 20vw;
+  height: 26vh;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat;
+  box-sizing: border-box;
+  opacity: 1;
+}
+.carditems:hover {
+  box-shadow: -4px 18px 30px #0000001a;
+
+  border: 0.10000000100011612px solid #000000;
+  border-radius: 5px;
+}
+.cardimage {
+  width: 7vw;
+  height: 15vh;
+  border: 2px solid #f6f7f8;
+  border-radius: 4px;
+  opacity: 1;
+  box-sizing: border-box;
+}
+.carddetails {
+  padding-top: 15px;
+  width: 10vw;
+  height: 15vh;
+  font: normal normal 600 12px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+  opacity: 1;
+}
+
+.cardprice {
+  text-align: center;
+  font: normal normal normal 16px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #ff4858;
+  opacity: 1;
+  padding-right: 10px;
+}
+.cardactualprice {
+  text-align: center;
+  font: normal normal normal 16px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #c1c8ce;
+  opacity: 1;
+  text-decoration-line: line-through;
+}

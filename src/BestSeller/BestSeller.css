@@ -1,0 +1,104 @@
+.bestseller {
+  width: 100vw;
+  height: 135vh;
+  margin-top: 12vh;
+}
+.besttitle {
+  width: 100vw;
+  height: 34px;
+  text-align: center;
+  font: normal normal 600 26px/36px Proxima Nova;
+  letter-spacing: 0.75px;
+  color: #22262a;
+}
+.bestsellernavbar {
+  display: flex;
+  margin: 5vh auto 5vh;
+  justify-content: space-between;
+  width: 30vw;
+  text-align: center;
+  font: normal normal 600 12px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+}
+.BScardcontainer {
+  display: flex;
+  width: 75%;
+  margin: 0 auto 10vh;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding-left: 2vw;
+}
+.BScarditems {
+  width: 16vw;
+  height: 44vh;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat;
+  box-sizing: border-box;
+  border: 3px solid #f6f7f8;
+  border-radius: 4px;
+  text-align: center;
+  margin: 2vh 1vw;
+}
+.BScarditems:hover {
+  box-shadow: -4px 18px 30px #0000001a;
+  border: 3px solid #f6f7f8;
+  border-radius: 4px;
+}
+.BScardimage {
+  margin-top: 2vh;
+  width: 14vw;
+  height: 22vh;
+  border: 2px solid #f6f7f8;
+  border-radius: 4px;
+  opacity: 1;
+  box-sizing: border-box;
+}
+.BScarddetails {
+  padding-top: 2vh;
+  width: 14vw;
+  height: 15vh;
+  font: normal normal 600 16px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+  margin: auto;
+}
+.BScardrating {
+  display: block;
+  margin: 1vh 2vw;
+  text-align: center;
+}
+.BScardprice {
+  text-align: center;
+  font: normal normal normal 15px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #ff4858;
+  opacity: 1;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+.BScardactualprice {
+  text-align: center;
+  font: normal normal normal 16px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #c1c8ce;
+  opacity: 1;
+  text-decoration-line: line-through;
+  display: inline-block;
+}
+.loadmorediv {
+  font: normal normal bold 14px/17px Proxima Nova;
+  letter-spacing: 0px;
+  color: #33a0ff;
+  text-decoration: none;
+  width: 7vw;
+  align-items: center;
+  margin: 0 auto 0;
+}
+.loadmorebutton {
+  font: normal normal bold 15px/17px Proxima Nova;
+  letter-spacing: 0px;
+  color: #33a0ff;
+  text-decoration: none;
+}

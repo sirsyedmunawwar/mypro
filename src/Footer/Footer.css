@@ -1,0 +1,64 @@
+.footerhr {
+  width: 1920px;
+  height: 2px;
+  background: #f6f7f8 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border: none;
+}
+.footerdiv {
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+  margin: 0 auto 0;
+  height: 28vh;
+  align-items: center;
+  padding-bottom: 2vh;
+}
+.footeritem {
+  width: 269px;
+  height: 91px;
+  font: normal normal normal 12px/20px Proxima Nova;
+  letter-spacing: 0px;
+  color: #22262a;
+}
+.footerlogo {
+  width: 104px;
+  height: 28px;
+  background: transparent url("../Assets/ishop.svg") 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin-bottom: 2vh;
+}
+.footersocialfb {
+  background: transparent url("../Assets/facebook.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  width: 8px;
+  height: 15px;
+  display: inline-block;
+}
+.footersocialtw {
+  width: 15px;
+  height: 12px;
+  background: transparent url("../Assets/twitter.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  display: inline-block;
+  margin-left: 10px;
+}
+.footerdatadiv {
+  display: flex;
+  width: 80vw;
+  margin: 0px auto 0px;
+  height: 30vh;
+  align-items: start;
+  padding: 5vh 0px;
+  justify-content: center;
+}
+.footerdataitem {
+  padding-left: 3.5vw;
+  width: 269px;
+  height: 91px;
+  font: normal normal normal 12px/20px Proxima Nova;
+  letter-spacing: 0px;
+  color: #22262a;
+}
