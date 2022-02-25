@@ -1,0 +1,96 @@
+.Pcardcontainer {
+  display: flex;
+  width: 80%;
+  margin: 0 auto 10vh;
+  flex-wrap: wrap;
+  height: 110vh;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.Pcarditems {
+  width: 40vw;
+  height: 110vh;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto 0;
+  padding-top: 10vh;
+}
+
+.Pcardimage {
+  margin-top: 2vh;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 4px;
+  opacity: 1;
+  box-sizing: border-box;
+}
+.Pcarddetails {
+  padding: 5vh 0;
+  width: 40vw;
+  height: 15vh;
+  font: normal normal 600 20px/17px Proxima Nova;
+  letter-spacing: 0.35px;
+  color: #262626;
+  margin: auto;
+}
+.Pcardrating {
+  display: block;
+  margin: 5vh 2vw;
+  text-align: center;
+}
+.Pcardprice {
+  text-align: center;
+  font: normal normal normal 25px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #ff4858;
+  opacity: 1;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+.Pcardactualprice {
+  text-align: center;
+  font: normal normal normal 25px/17px Proxima Nova;
+  letter-spacing: 0.4px;
+  color: #c1c8ce;
+  opacity: 1;
+  text-decoration-line: line-through;
+  display: inline-block;
+}
+.productbutton1 {
+  width: 14vw;
+  height: 10vh;
+  background-color: #ff4858;
+  border: none;
+  margin-right: 2vw;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.productbutton2 {
+  width: 14vw;
+  height: 10vh;
+  border: 2px solid #ffc600;
+  display: inline-block;
+  color: #ffc600;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: white;
+}
+.productbutton1:hover {
+  box-shadow: -4px 18px 30px #0000001a;
+  border-radius: 4px;
+  background-color: white;
+  color: #ff4858;
+  border: 2px solid #ff4858;
+}
+.productbutton2:hover {
+  background-color: #ffc600;
+  color: white;
+  box-shadow: -4px 18px 30px #0000001a;
+  border-radius: 4px;
+}

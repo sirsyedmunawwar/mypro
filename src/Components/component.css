@@ -1,0 +1,28 @@
+.loginpage {
+  width: 15vw;
+  margin: 0 auto 0;
+}
+.loginheading {
+  color: #fc3e39;
+}
+.loginform {
+  display: flex;
+  flex-flow: column;
+}
+#name {
+  height: 20px;
+  margin: 10px 0;
+}
+#email {
+  height: 20px;
+}
+#password {
+  height: 20px;
+  margin: 10px 0;
+}
+#loginsubmit {
+  height: 25px;
+  background-color: #fc3e39;
+  color: white;
+  border: none;
+}

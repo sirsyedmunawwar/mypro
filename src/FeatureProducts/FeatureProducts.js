@@ -1,75 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./FeatureProducts.css";
 import { Rating } from "react-simple-star-rating";
 import img1 from "../Assets/beats_solo_2.png";
 import img2 from "../Assets/H-squared.png";
+import { Content } from "../Api/Api";
+
 function FeatureProducts() {
-  const card = [
-    {
-      id: 1,
-      img: img1,
-      title: "1 Beats Solo 2 On Ear Headphones - Black 1",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "2 Beats Solo 2 On Ear Headphones - Black 2",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 3,
-      img: img1,
-      title: "3 Beats Solo 2 On Ear Headphones - Black 3",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 4,
-      img: img1,
-      title: "4 Beats Solo 2 On Ear Headphones - Black 4",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 5,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 5",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 6,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 6",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 7,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 7",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 8,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 8",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-  ];
+  const [posts, getPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let data = await Content(); // params in url
+      console.log(data);
+      getPosts(data);
+    };
+    fetchData();
+  }, []);
+
   const [left, setleft] = useState(1);
   const [right, setright] = useState(3);
 
@@ -102,10 +49,10 @@ function FeatureProducts() {
           ></i>
         </button>
 
-        {card.map(
+        {posts.map(
           (item) =>
-            item.id >= left &&
-            item.id <= right && (
+            item.key >= left &&
+            item.key <= right && (
               <div className="carditems ">
                 <img className="cardimage" src={item.img}></img>
                 <div className="carddetails">
@@ -117,7 +64,6 @@ function FeatureProducts() {
                     readonly
                     size={15}
                   />
-
                   <span className="cardprice">{item.price}</span>
                   <span className="cardactualprice">{item.actualprice}</span>
                 </div>

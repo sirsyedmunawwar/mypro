@@ -7,8 +7,19 @@ import img2 from "../Assets/H-squared.png";
 import RangeSlider from "../Components/RangeSlider";
 import valuetext from "../Components/RangeSlider";
 import { NavLink, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Content } from "../Api/Api";
 function Store() {
+  const [posts, getPosts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      let data = await Content(); // params in url
+      console.log(data);
+      getPosts(data);
+    };
+    fetchData();
+  }, []);
+
   const Banner = [
     {
       title: "iPhone 8 Plus",
@@ -37,317 +48,24 @@ function Store() {
     { listitem: "Headphones", Qty: 5 },
     ,
   ];
-  const BestSeller1 = [
-    {
-      id: 1,
-      img: img1,
-      title: "1 Beats Solo 2 On Ear Headphones - Black 1",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "2 Beats Solo 2 On Ear Headphones - Black 2",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 3,
-      img: img1,
-      title: "3 Beats Solo 2 On Ear Headphones - Black 3",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 4,
-      img: img1,
-      title: "4 Beats Solo 2 On Ear Headphones - Black 4",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 5,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 5",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 6,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 6",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 7,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 7",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 8,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 8",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 5,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 5",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 6,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 6",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 7,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 7",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 8,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 8",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-  ];
-  const BestSeller2 = [
-    {
-      id: 1,
-      img: img1,
-      title: "2 Beats Solo 2 On Ear Headphones - Black 2",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "2 Beats Solo 2 On Ear Headphones - Black 2",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 3,
-      img: img1,
-      title: "3 Beats Solo 2 On Ear Headphones - Black 3",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 4,
-      img: img1,
-      title: "4 Beats Solo 2 On Ear Headphones - Black 4",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 5,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 5",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 6,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 6",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 7,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 7",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 8,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 8",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 5,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 5",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 6,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 6",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 7,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 7",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 8,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 8",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-  ];
-  const BestSeller3 = [
-    {
-      id: 1,
-      img: img1,
-      title: "3 Beats Solo 3 On Ear Headphones - Black 3",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "2 Beats Solo 2 On Ear Headphones - Black 2",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 3,
-      img: img1,
-      title: "3 Beats Solo 2 On Ear Headphones - Black 3",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 4,
-      img: img1,
-      title: "4 Beats Solo 2 On Ear Headphones - Black 4",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 5,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 5",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 6,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 6",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 7,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 7",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 8,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 8",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 5,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 5",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 6,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 6",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 7,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 7",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-    {
-      id: 8,
-      img: img1,
-      title: "5 Beats Solo 2 On Ear Headphones - Black 8",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-  ];
+
   const [page1, setpage1] = useState(true);
   const [page2, setpage2] = useState(false);
   const [page3, setpage3] = useState(false);
   const handleclick1 = () => {
-    setpage2(!page2);
-    setpage1(!page1);
-    setpage1(!page3);
+    setpage1(true);
+    setpage2(false);
+    setpage3(false);
   };
   const handleclick2 = () => {
-    setpage2(!page2);
-    setpage1(!page1);
-    setpage3(!page3);
+    setpage1(false);
+    setpage2(true);
+    setpage3(false);
   };
   const handleclick3 = () => {
-    setpage2(!page2);
-    setpage1(!page1);
-    setpage3(!page3);
+    setpage1(false);
+    setpage2(false);
+    setpage3(true);
   };
 
   return (
@@ -401,100 +119,112 @@ function Store() {
             </div>
             <img className="storeimage" src={Banner[0].image}></img>
           </div>
-          {page1 === true ? (
+          {page1 ? (
             <div className="Scardcontainer">
-              {BestSeller1.map((item) => (
-                <div className="Scarditems ">
-                  <img className="Scardimage" src={item.img}></img>
-                  <div className="Scarddetails">
-                    <div className="Scardtitle">{item.title}</div>
-
-                    <Rating
-                      className="Scardrating"
-                      ratingValue={item.rating}
-                      readonly
-                      size={20}
-                    />
-
-                    <div className="Scardprice">{item.price}</div>
-                    <div className="BScardactualprice">{item.actualprice}</div>
-                  </div>
-                </div>
-              ))}
+              {posts.map(
+                (item) =>
+                  item.key >= 17 &&
+                  item.key <= 28 && (
+                    <div className="Scarditems ">
+                      <img className="Scardimage" src={item.img}></img>
+                      <div className="Scarddetails">
+                        <div className="Scardtitle">{item.title}</div>
+                        <Rating
+                          className="Scardrating"
+                          ratingValue={item.rating}
+                          readonly
+                          size={20}
+                        />
+                        <div className="Scardprice">{item.price}</div>
+                        <div className="BScardactualprice">
+                          {item.actualprice}
+                        </div>
+                      </div>
+                    </div>
+                  )
+              )}
             </div>
-          ) : null}
-          {page2 === true ? (
+          ) : (
+            ""
+          )}
+          {page2 ? (
             <div className="Scardcontainer">
-              {BestSeller2.map((item) => (
-                <div className="Scarditems ">
-                  <img className="Scardimage" src={item.img}></img>
-                  <div className="Scarddetails">
-                    <div className="Scardtitle">{item.title}</div>
-
-                    <Rating
-                      className="Scardrating"
-                      ratingValue={item.rating}
-                      readonly
-                      size={20}
-                    />
-
-                    <div className="Scardprice">{item.price}</div>
-                    <div className="BScardactualprice">{item.actualprice}</div>
-                  </div>
-                </div>
-              ))}
+              {posts.map(
+                (item) =>
+                  item.key >= 29 &&
+                  item.key <= 40 && (
+                    <div className="Scarditems ">
+                      <img className="Scardimage" src={item.img}></img>
+                      <div className="Scarddetails">
+                        <div className="Scardtitle">{item.title}</div>
+                        <Rating
+                          className="Scardrating"
+                          ratingValue={item.rating}
+                          readonly
+                          size={20}
+                        />
+                        <div className="Scardprice">{item.price}</div>
+                        <div className="BScardactualprice">
+                          {item.actualprice}
+                        </div>
+                      </div>
+                    </div>
+                  )
+              )}
             </div>
-          ) : null}{" "}
-          {page3 === true ? (
+          ) : (
+            ""
+          )}{" "}
+          {page3 ? (
             <div className="Scardcontainer">
-              {BestSeller3.map((item) => (
-                <div className="Scarditems ">
-                  <img className="Scardimage" src={item.img}></img>
-                  <div className="Scarddetails">
-                    <div className="Scardtitle">{item.title}</div>
-
-                    <Rating
-                      className="Scardrating"
-                      ratingValue={item.rating}
-                      readonly
-                      size={20}
-                    />
-
-                    <div className="Scardprice">{item.price}</div>
-                    <div className="BScardactualprice">{item.actualprice}</div>
-                  </div>
-                </div>
-              ))}
+              {posts.map(
+                (item) =>
+                  item.key >= 41 &&
+                  item.key <= 55 && (
+                    <div className="Scarditems ">
+                      <img className="Scardimage" src={item.img}></img>
+                      <div className="Scarddetails">
+                        <div className="Scardtitle">{item.title}</div>
+                        <Rating
+                          className="Scardrating"
+                          ratingValue={item.rating}
+                          readonly
+                          size={20}
+                        />
+                        <div className="Scardprice">{item.price}</div>
+                        <div className="BScardactualprice">
+                          {item.actualprice}
+                        </div>
+                      </div>
+                    </div>
+                  )
+              )}
             </div>
-          ) : null}
+          ) : (
+            ""
+          )}
           <div className="pagenos">
-            <Link
+            <button
               onClick={() => handleclick1()}
               to="/store"
-              className={({ isActive }) =>
-                isActive ? "activepage" : "pagebutton"
-              }
+              className={page1 ? "activepage" : "pagebutton"}
             >
               1
-            </Link>
-            <Link
+            </button>
+            <button
               onClick={() => handleclick2()}
               to="/store"
-              className={({ isActive }) =>
-                isActive ? "activepage" : "pagebutton"
-              }
+              className={page2 ? "activepage" : "pagebutton"}
             >
               2
-            </Link>
-            <Link
+            </button>
+            <button
               onClick={() => handleclick3()}
               to="/store"
-              className={({ isActive }) =>
-                isActive ? "activepage" : "pagebutton"
-              }
+              className={page3 ? "activepage" : "pagebutton"}
             >
               3
-            </Link>
+            </button>
           </div>
         </div>
       </div>
