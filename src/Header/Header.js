@@ -39,7 +39,7 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/store"
+            to="/"
           >
             STORE
           </NavLink>
@@ -48,7 +48,7 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Iphone"
+            to="/"
           >
             IPHONE
           </NavLink>
@@ -57,7 +57,7 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Ipod"
+            to="/"
           >
             IPOD
           </NavLink>
@@ -66,7 +66,7 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Macbook"
+            to="/"
           >
             MACBOOK
           </NavLink>
@@ -75,7 +75,7 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Accesories"
+            to="/"
           >
             ACCESORIES
           </NavLink>

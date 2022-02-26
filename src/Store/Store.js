@@ -125,7 +125,11 @@ function Store() {
                 (item) =>
                   item.key >= 17 &&
                   item.key <= 28 && (
-                    <div className="Scarditems ">
+                    <Link
+                      className="Scarditems "
+                      style={{ textDecorationLine: "none" }}
+                      to={`/${item._id}`}
+                    >
                       <img className="Scardimage" src={item.img}></img>
                       <div className="Scarddetails">
                         <div className="Scardtitle">{item.title}</div>
@@ -140,7 +144,7 @@ function Store() {
                           {item.actualprice}
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   )
               )}
             </div>
@@ -153,7 +157,11 @@ function Store() {
                 (item) =>
                   item.key >= 29 &&
                   item.key <= 40 && (
-                    <div className="Scarditems ">
+                    <Link
+                      className="Scarditems "
+                      style={{ textDecorationLine: "none" }}
+                      to={`/${item._id}`}
+                    >
                       <img className="Scardimage" src={item.img}></img>
                       <div className="Scarddetails">
                         <div className="Scardtitle">{item.title}</div>
@@ -168,7 +176,7 @@ function Store() {
                           {item.actualprice}
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   )
               )}
             </div>
@@ -181,7 +189,11 @@ function Store() {
                 (item) =>
                   item.key >= 41 &&
                   item.key <= 55 && (
-                    <div className="Scarditems ">
+                    <Link
+                      className="Scarditems "
+                      style={{ textDecorationLine: "none" }}
+                      to={`/${item._id}`}
+                    >
                       <img className="Scardimage" src={item.img}></img>
                       <div className="Scarddetails">
                         <div className="Scardtitle">{item.title}</div>
@@ -196,7 +208,7 @@ function Store() {
                           {item.actualprice}
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   )
               )}
             </div>

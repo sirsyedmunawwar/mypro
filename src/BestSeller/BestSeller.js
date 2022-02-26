@@ -32,7 +32,7 @@ const BestSeller = () => {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/store"
+            to="/"
           >
             Mac
           </NavLink>
@@ -40,7 +40,7 @@ const BestSeller = () => {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Iphone"
+            to="/"
           >
             iPhone
           </NavLink>
@@ -48,7 +48,7 @@ const BestSeller = () => {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Ipod"
+            to="/"
           >
             ipad
           </NavLink>
@@ -56,7 +56,7 @@ const BestSeller = () => {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Macbook"
+            to="/"
           >
             ipod
           </NavLink>
@@ -64,7 +64,7 @@ const BestSeller = () => {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/Accesories"
+            to="/"
           >
             Accesories
           </NavLink>
@@ -76,7 +76,8 @@ const BestSeller = () => {
               item.key >= 9 &&
               item.key <= 16 && (
                 <Link
-                  to={`api/product/find/${item._id}`}
+                  style={{ textDecorationLine: "none" }}
+                  to={`/${item._id}`}
                   className="BScarditems "
                 >
                   <img className="BScardimage" src={item.img}></img>

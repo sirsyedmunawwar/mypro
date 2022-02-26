@@ -4,6 +4,7 @@ import { Rating } from "react-simple-star-rating";
 import img1 from "../Assets/beats_solo_2.png";
 import img2 from "../Assets/H-squared.png";
 import { Content } from "../Api/Api";
+import { Link } from "react-router-dom";
 
 function FeatureProducts() {
   const [posts, getPosts] = useState([]);
@@ -53,7 +54,11 @@ function FeatureProducts() {
           (item) =>
             item.key >= left &&
             item.key <= right && (
-              <div className="carditems ">
+              <Link
+                style={{ textDecorationLine: "none" }}
+                to={`/${item._id}`}
+                className="carditems "
+              >
                 <img className="cardimage" src={item.img}></img>
                 <div className="carddetails">
                   <div className="cardtitle">{item.title}</div>
@@ -67,7 +72,7 @@ function FeatureProducts() {
                   <span className="cardprice">{item.price}</span>
                   <span className="cardactualprice">{item.actualprice}</span>
                 </div>
-              </div>
+              </Link>
             )
         )}
 

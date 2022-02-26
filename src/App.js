@@ -13,16 +13,18 @@ import Product from "./Product/Product";
 import Store from "./Store/Store";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
+import ScrollToTop from "./Components/ScrollToTop";
 function App() {
   return (
     <>
       <BrowserRouter>
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Store" element={<Store />}></Route>
           {/* <Route path="/Iphone" element={<Product />}></Route> */}
-          <Route path="/IPod" element={<Cart />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
           <Route path="/Macbook" element={<Login />}></Route>
           <Route path="/Accesories" element={<Signup />}></Route>
           <Route path="/:id" element={<Product />}></Route>
