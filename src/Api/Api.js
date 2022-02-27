@@ -1,8 +1,8 @@
 import axios from "axios";
-const url = "http://localhost:5000/";
+const url = "https://ishopserver22.herokuapp.com/product/product";
 export const Content = async () => {
   try {
-    let response = await axios.get(`http://localhost:3000/api/product`);
+    let response = await axios.get(url);
     return response.data;
   } catch (error) {
     console.log("Error while calling getPosts API ", error);
