@@ -26,3 +26,9 @@
   color: white;
   border: none;
 }
+.order {
+  color: #fc3e39;
+  text-align: center;
+  height: 50vh;
+  padding-top: 20vh;
+}

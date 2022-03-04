@@ -6,8 +6,10 @@ import "./Product.css";
 import { useParams } from "react-router-dom";
 import { Content } from "../Api/Api";
 import { CartState } from "../context/Context";
+import { useNavigate } from "react-router-dom";
 
 function Product() {
+  let Navigate = useNavigate();
   const [posts, getPosts] = useState([]);
   const { id } = useParams();
   const {
@@ -69,7 +71,12 @@ function Product() {
                   Add to Cart
                 </button>
               )}
-              <button className="productbutton2">Buy Now</button>
+              <button
+                onClick={() => Navigate("/cart")}
+                className="productbutton2"
+              >
+                Go to Cart
+              </button>
             </div>
           ) : (
             ""

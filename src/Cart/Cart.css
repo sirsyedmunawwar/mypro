@@ -1,13 +1,13 @@
 .cart {
   width: 100vw;
-  height: 100vh;
+  height: object-fit;
 }
 .cartheadings {
   padding-top: 10vh;
   display: flex;
-  width: 70%;
-  margin: 0 auto 0;
-  justify-content: space-around;
+  width: 40%;
+  margin: 0 0 0 470px;
+  justify-content: space-evenly;
   text-align: center;
   font: normal normal 600 18px/28px Proxima Nova;
   letter-spacing: 0px;
@@ -28,12 +28,18 @@
   color: #262626;
 }
 .cartproducts {
-  width: 70%;
-  margin: 0 auto 0;
+  width: 50%;
+  margin: 30px auto 0;
   height: 15vh;
-
   display: flex;
   justify-content: space-between;
+}
+.cartproducts > button {
+  height: 30px;
+  background-color: white;
+  border: none;
+  margin: 30px 0 0 20px;
+  color: red;
 }
 .cartimage {
   width: 10vw;
@@ -42,6 +48,8 @@
 .carttitle {
   width: 10vw;
   padding-top: 5vh;
+  position: relative;
+  left: -50px;
 }
 .cartprice {
   padding-top: 5vh;

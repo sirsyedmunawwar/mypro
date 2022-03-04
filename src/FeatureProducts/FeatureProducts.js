@@ -5,18 +5,22 @@ import img1 from "../Assets/beats_solo_2.png";
 import img2 from "../Assets/H-squared.png";
 import { Content } from "../Api/Api";
 import { Link } from "react-router-dom";
+import { CartState } from "../context/Context";
 
 function FeatureProducts() {
   const [posts, getPosts] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      let data = await Content(); // params in url
-      console.log(data);
-      getPosts(data);
-    };
-    fetchData();
-  }, []);
+  const {
+    state: { cart, products },
+    dispatch,
+  } = CartState();
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     let data = await Content(); // params in url
+  //     console.log(data);
+  //     getPosts(data);
+  //   };
+  //   fetchData();
+  // }, []);
 
   const [left, setleft] = useState(1);
   const [right, setright] = useState(3);
@@ -50,7 +54,7 @@ function FeatureProducts() {
           ></i>
         </button>
 
-        {posts.map(
+        {products.map(
           (item) =>
             item.key >= left &&
             item.key <= right && (

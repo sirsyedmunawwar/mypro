@@ -83,11 +83,10 @@ const BestSeller = () => {
             (item) =>
               item.key >= 9 &&
               item.key <= 16 && (
-                <div>
+                <div className="BScarditems ">
                   <Link
                     style={{ textDecorationLine: "none" }}
                     to={`/${item._id}`}
-                    className="BScarditems "
                   >
                     <img className="BScardimage" src={item.img}></img>
                     <div className="BScarddetails">

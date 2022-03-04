@@ -1,13 +1,20 @@
 .header {
   width: 100vw;
-  height: 15vh;
-  margin-top: 12vh;
+  height: 20vh;
+  margin-top: 1vh;
+  padding-top: 5vh;
 }
 .title {
   background: transparent url("../Assets/iSHOP\ Logo.svg") 0% 0% no-repeat;
   margin: 0 auto 0;
   width: 122px;
   height: 32px;
+}
+.carticon {
+  position: relative;
+  right: -92%;
+  top: -25px;
+  color: #ff4858 !important;
 }
 .navbar {
   display: flex;

@@ -9,16 +9,21 @@ import valuetext from "../Components/RangeSlider";
 import { NavLink, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Content } from "../Api/Api";
+import { CartState } from "../context/Context";
 function Store() {
   const [posts, getPosts] = useState([]);
   useEffect(() => {
-    const fetchData = async () => {
-      let data = await Content(); // params in url
-      console.log(data);
-      getPosts(data);
-    };
-    fetchData();
+    // const fetchData = async () => {
+    //   let data = await Content(); // params in url
+    //   console.log(data);
+    //   getPosts(data);
+    // };
+    // fetchData();
   }, []);
+  const {
+    state: { cart, products },
+    dispatch,
+  } = CartState();
 
   const Banner = [
     {
@@ -121,7 +126,7 @@ function Store() {
           </div>
           {page1 ? (
             <div className="Scardcontainer">
-              {posts.map(
+              {products.map(
                 (item) =>
                   item.key >= 17 &&
                   item.key <= 28 && (
@@ -151,7 +156,7 @@ function Store() {
           ) : (
             ""
           )}
-          {page2 ? (
+          {products ? (
             <div className="Scardcontainer">
               {posts.map(
                 (item) =>
@@ -183,7 +188,7 @@ function Store() {
           ) : (
             ""
           )}{" "}
-          {page3 ? (
+          {products ? (
             <div className="Scardcontainer">
               {posts.map(
                 (item) =>

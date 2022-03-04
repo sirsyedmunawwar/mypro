@@ -1,8 +1,21 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { CartState } from "../context/Context";
 function Header() {
   const [store, setstore] = useState(false);
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      right: -3,
+      top: 13,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: "0 4px",
+    },
+  }));
   const Data = [
     { category1: "AirPort & Wireless" },
     { category1: "AppleCare" },
@@ -20,9 +33,21 @@ function Header() {
     { category3: "Music Creation" },
     { category3: "Networking & Server" },
   ];
+  const {
+    state: { cart },
+    dispatch,
+    productDispatch,
+  } = CartState();
   return (
     <>
       <div className="header">
+        <Link to="/cart" onClick={() => setstore(false)}>
+          <IconButton aria-label="cart" className="carticon">
+            <StyledBadge badgeContent={cart.length} color="secondary">
+              <ShoppingCartIcon />
+            </StyledBadge>
+          </IconButton>
+        </Link>
         <div className="title"></div>
         <div className="navbar">
           <NavLink
@@ -48,7 +73,7 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/cart"
+            to="/"
           >
             IPHONE
           </NavLink>
