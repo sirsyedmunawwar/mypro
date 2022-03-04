@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "https://ishopserver22.herokuapp.com/product/product";
+const url = "http://localhost:8000/product/product";
 export const Content = async () => {
   try {
     let response = await axios.get(url);

@@ -48,7 +48,7 @@ function Header() {
             className={({ isActive }) =>
               isActive ? "activenavitem" : "navitem"
             }
-            to="/"
+            to="/cart"
           >
             IPHONE
           </NavLink>

@@ -1,18 +1,30 @@
 import React from "react";
 import "./Cart.css";
 import img1 from "../Assets/beats_solo_2.png";
+import { useEffect, useState } from "react";
+import { CartState } from "../context/Context";
 
 function Cart() {
-  const cartitem = [
-    {
-      id: 1,
-      img: img1,
-      title: "1 Beats Solo 2 On Ear Headphones - Black 1",
-      rating: 75,
-      price: " $499",
-      actualprice: "$599",
-    },
-  ];
+  const {
+    state: { cart },
+    dispatch,
+  } = CartState();
+  // const [total, setTotal] = useState();
+
+  // useEffect(() => {
+  //   setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
+  // }, [cart]
+  // const cartitem = [
+  //   {
+  //     id: 1,
+  //     img: img1,
+  //     title: "1 Beats Solo 2 On Ear Headphones - Black 1",
+  //     rating: 75,
+  //     price: " $499",
+  //     actualprice: "$599",
+  //   },
+  // ];
+  console.log(cart);
   return (
     <>
       <div className="cart">
@@ -22,7 +34,8 @@ function Cart() {
           <p className="cartitem">QTY</p>
           <p className="cartitem"> PRICE</p>
         </div>
-        {cartitem.map((item) => (
+
+        {cart.map((item) => (
           <div className="cartproducts">
             <img className="cartimage" src={item.img}></img>
             <div className="carttitle ">{item.title}</div>
@@ -35,6 +48,7 @@ function Cart() {
             <div className="carttotalprice ">total</div>
           </div>
         ))}
+
         <div className="total">
           <p>Subtotal</p>
           <p>Shipping fee</p>
